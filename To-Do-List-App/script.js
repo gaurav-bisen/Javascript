@@ -6,16 +6,23 @@ let tasks = JSON.parse(localStorage.getItem("myTasks")) || [];
 
 function allTasks() {
     list.innerHTML = ''; //clear list first (causing duplicates)
-    tasks.forEach(task => {
+    tasks.forEach((task,idx) => {
         const li = document.createElement('li');
-        li.textContent = `• ${task}`;
+        // li.innerHTML = `• ${task} <button onclick="deleteTask(${idx})">delete</button>`;
+        li.innerHTML = `• ${task} <a href="#" onclick="deleteTask(${idx})"><i class="fa-solid fa-trash-can"></i></a>`;
         list.appendChild(li);
     });
 }
 
+
 function saveAll() {
     localStorage.setItem("myTasks", JSON.stringify(tasks));
     allTasks();
+}
+
+function deleteTask(idx){
+    tasks.splice(idx,1);
+    saveAll();
 }
 
 
