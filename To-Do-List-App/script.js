@@ -9,7 +9,7 @@ function allTasks() {
     tasks.forEach((task,idx) => {
         const li = document.createElement('li');
         // li.innerHTML = `• ${task} <button onclick="deleteTask(${idx})">delete</button>`;
-        li.innerHTML = `• ${task} <a href="#" onclick="deleteTask(${idx})"><i class="fa-solid fa-trash-can"></i></a>`;
+        li.innerHTML = `${task} <a href="#" onclick="deleteTask(${idx})"><i class="fa-solid fa-trash-can"></i></a>`;
         list.appendChild(li);
     });
 }
