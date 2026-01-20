@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>To-Do</title>
 </head>
+
 <body class="bg-gray-200">
     <h1 class="text-3xl font-bold underline flex justify-center m-10">To-Do List</h1>
-    <div class="container flex justify-center">
-        <div  class="flex mb-8 gap-2">
-            <input id="input" class="p-3 rounded-xl border border-slate-400 outline-none" type="text" placeholder="Enter a new task">
-            <button id="btn" class="bg-green-400 font-semibold p-3 rounded-xl">Add Task</button>
+    <div>
+        <!-- add new todo form  -->
+        <div class="container flex justify-center">
+            <div class="flex mb-8 gap-2">
+                <input id="input" class="p-3 rounded-xl border border-slate-400 outline-none" type="text"
+                    placeholder="Enter a new task">
+                <button id="btn" class="bg-green-400 font-semibold p-3 rounded-xl">Add Task</button>
+            </div>
         </div>
-        
+        <!-- all todo list  -->
+        <div class="task flex justify-center">
+            <li id="list" class="font-semibold"></li>
+        </div>
+        <!-- done todo list  -->
+        <h3 class="flex justify-center text-2xl font-bold underline  m-10">Done todo tasks</h3>
+        <div class="flex justify-center">
+            <li class="line-through" id="doneTasks"></li>
+        </div>
     </div>
-    <div class="task flex justify-center">
-        <ul id="list" class="font-semibold"></ul>
-    </div>
-    
+
+
+
+
     <script src="script.js"></script>
 </body>
+
 </html>
