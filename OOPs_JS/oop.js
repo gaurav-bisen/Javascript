@@ -43,7 +43,7 @@ const userOne = new User("gaurav", 21, true);
 const userTwo = new User("bisen", 25, false); // all value override in previous user
 
 console.log(userOne);
-console.log(userOne.constructor); // gives user function, cusnstructor is  reference of our own
+console.log(userOne.constructor); // gives user function, constructor is  reference of our own
 console.log(userTwo);
 console.log(userOne.greeting());
 
@@ -55,7 +55,7 @@ console.log(userOne.greeting());
 //3- this keyword -  argument inject inside it
 //4- found inside function
 
-//instanceof - to se if the prototype property of a constructor appears anywhere in the prototype chain of an bject.
+//instanceof - to se if the prototype property of a constructor appears anywhere in the prototype chain of an object.
 //the return value is a boolean value
 
 
