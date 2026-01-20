@@ -24,7 +24,7 @@ function allDoneTasks() {
     doneList.innerHTML = ''
     doneTasks.forEach((task, idx) => {
         const li = document.createElement('li');
-        li.innerHTML = `${task} <a href="#" onclick="deleteDoneTask(${idx})"><i class="fa-solid fa-trash-can"></i></a>`;
+        li.innerHTML = `${task.text} <a href="#" onclick="deleteDoneTask(${idx})"><i class="fa-solid fa-trash-can"></i></a>`;
         doneList.appendChild(li);
 
     })
@@ -36,7 +36,7 @@ function saveAll() {
 }
 
 function deleteTask(idx) {
-    const doneTask = tasks.splice(idx, 1);
+    const doneTask = tasks.splice(idx, 1)[0];
     doneTasks.push(doneTask);
 
 
