@@ -11,7 +11,11 @@ function allTasks() {
     tasks.forEach((task, idx) => {
         const li = document.createElement('li');
         // li.innerHTML = `• ${task} <button onclick="deleteTask(${idx})">delete</button>`;
-        li.innerHTML = `${task} <a href="#" onclick="deleteTask(${idx})"><i class="fa-regular fa-square-check"></i></a>`;
+        li.innerHTML = `${task.text} <a href="#" 
+                    onclick="deleteTask(${idx})">
+                    <span class="text-sm text-gray-500 mr-2">[${task.time}]</span>
+                    <i class="fa-regular fa-square-check"></i>
+                </a> `;
         list.appendChild(li);
     });
 }
@@ -51,7 +55,13 @@ function deleteDoneTask(idx) {
 btn.addEventListener("click", () => {
     const text = input.value;
     if (text) {
-        tasks.push(text);
+        tasks.push({
+            text: text,
+            time: new Date().toLocaleTimeString([], {
+                hour: '2-digit',
+                minute: '2-digit'
+            })
+        });
         saveAll();
         input.value = '';
     }
