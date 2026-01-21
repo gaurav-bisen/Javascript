@@ -1,6 +1,6 @@
 async function getAirQuality(data) {
-    const city = cityInput.value;
-    if (!city) return;
+    // const city = cityInput.value;
+    // if (!city) return;
 
     const aqi = data.current.air_quality;
     const aqiIndex = aqi["us-epa-index"];

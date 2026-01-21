@@ -8,7 +8,7 @@
     <title>Weather Api</title>
 </head>
 
-<body class="bg-gray-900 min-h-screen flex items-center justify-center">
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center">
 
     <div class="bg-white p-6 rounded-lg shadow w-full max-w-md">
         <h2 class="text-xl font-semibold text-center mb-4">
@@ -38,12 +38,24 @@
         </div>
     </div>
 
+    <div class="bg-white mt-9 w-md p-4 rounded-lg shadow">
+        <h3 class="text-lg font-semibold mb-2">
+            Recent Searches
+        </h3>
+
+        <div id="searchHistory" class="space-y-2">
+            <!-- history buttons injected here -->
+        </div>
+    </div>
+      
+
     <script src="getAirQuality.js"></script>
     <script src="getWeather.js"></script>
     <script src="getElements.js"></script>
     <script src="api.js"></script>
     <script src="script.js"></script>
     <script src="aqiIdx.js"></script>
+    <script src="searchHistory.js"></script>
 </body>
 
 </html>

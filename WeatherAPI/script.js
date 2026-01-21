@@ -15,6 +15,9 @@ btn.addEventListener("click", async () => {
 
         await getAirQuality(data);
 
+        //history
+        saveCity(city);
+
         resultDiv.classList.remove("hidden");
         loading.classList.add("hidden");
     } catch (err) {
@@ -24,3 +27,5 @@ btn.addEventListener("click", async () => {
 
     }
 });
+
+
