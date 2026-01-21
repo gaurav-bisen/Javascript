@@ -8,7 +8,7 @@ function saveCity(city) {
     history.unshift(city);
     history = history.slice(0, 5);
 
-    
+
     localStorage.setItem("cityHistory", JSON.stringify(history));
 
     saveAllSearch();
@@ -42,8 +42,6 @@ function saveAllSearch() {
             } catch (err) {
                 errorDiv.textContent = err.message;
                 errorDiv.classList.remove("hidden");
-            } finally {
-                // loading.classList.add("hidden");
             }
         });
         container.appendChild(btn);

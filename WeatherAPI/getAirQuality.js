@@ -5,7 +5,7 @@ async function getAirQuality(data) {
     const aqi = data.current.air_quality;
     const aqiIndex = aqi["us-epa-index"];
 
-    aqiValue.textContent = aqi["us-epa-index"];
+    // aqiValue.textContent = aqi["us-epa-index"];
 
     aqiValue.textContent = aqiIndex;
     aqiMessage.textContent = getAqiMessage(aqiIndex);

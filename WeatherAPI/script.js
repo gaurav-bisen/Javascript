@@ -4,7 +4,7 @@ btn.addEventListener("click", async () => {
     const city = cityInput.value;
     if (!city) return;
 
-    errorDiv.classList.add("hidden");
+    // errorDiv.classList.add("hidden");
     resultDiv.classList.add("hidden");
     loading.classList.remove("hidden");
 
@@ -23,8 +23,7 @@ btn.addEventListener("click", async () => {
     } catch (err) {
         errorDiv.textContent = err.message;
         errorDiv.classList.remove("hidden");
-    loading.classList.add("hidden");
-
+        loading.classList.add("hidden");
     }
 });
 
