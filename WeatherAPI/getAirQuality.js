@@ -7,6 +7,7 @@ async function getAirQuality(data) {
 
     // aqiValue.textContent = aqi["us-epa-index"];
 
+
     aqiValue.textContent = aqiIndex;
     aqiMessage.textContent = getAqiMessage(aqiIndex);
 

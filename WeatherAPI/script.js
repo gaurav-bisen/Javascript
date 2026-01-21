@@ -5,6 +5,7 @@ btn.addEventListener("click", async () => {
     if (!city) return;
 
     // errorDiv.classList.add("hidden");
+
     resultDiv.classList.add("hidden");
     loading.classList.remove("hidden");
 
@@ -23,7 +24,9 @@ btn.addEventListener("click", async () => {
     } catch (err) {
         errorDiv.textContent = err.message;
         errorDiv.classList.remove("hidden");
+
         loading.classList.add("hidden");
+
     }
 });
 
